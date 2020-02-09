@@ -26,7 +26,7 @@ unzip(this_file)
 myData <- read.table(text = grep("^1/2/2007|^2/2/2007", readLines(file("household_power_consumption.txt")), value=TRUE),  
                      sep = ';', stringsAsFactors = FALSE, header = TRUE, na.strings="?",
                      col.names = c("Date", "Time", "Global_active_power", "Global_reactive_power", "Voltage", 
-                                   "Global_intensity", "Sub_metering_1","Sub_metering_2","Submetering_3"))
+                                   "Global_intensity", "Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
 # combining date and time
 myData$DateTime <- as.POSIXct(paste(myData$Date, myData$Time), format="%d/%m/%Y %H:%M:%S")
