@@ -33,8 +33,7 @@ myData$DateTime <- as.POSIXct(paste(myData$Date, myData$Time), format="%d/%m/%Y 
 
 # making plot 3
 with(myData, {
-  plot(Sub_metering_1~DateTime, type="l",
-       ylab = "Global Active Power (killowatts)", xlab = "")
+  plot(Sub_metering_1~DateTime, type="l", ylab = "Energy sub metering", xlab = "")
   lines(Sub_metering_2~DateTime, col="Red")
   lines(Sub_metering_3~DateTime, col="Blue")
 })
@@ -44,3 +43,7 @@ legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"
 # save image file
 dev.copy(png, "plot3.png", width=480, height=480)
 dev.off()
+
+
+
+
